@@ -8,7 +8,7 @@ function ServiceAdd(props) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    editService(dispatch, match.params.id);
+    dispatch(editService(match.params.id));
   }, [dispatch, match.params.id]);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ function ServiceAdd(props) {
   }, [finish]);
 
   const handleError = () => {
-    editService(dispatch, match.params.id);
+    dispatch(editService(match.params.id));
   }
 
   const handleChange = evt => {
@@ -58,7 +58,7 @@ function ServiceAdd(props) {
       return;      
     } 
 
-    addService(dispatch, service);
+    dispatch(addService(service));
   }
 
   if (loadingError) {

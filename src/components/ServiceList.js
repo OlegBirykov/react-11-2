@@ -8,17 +8,17 @@ function ServiceList(props) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetchServices(dispatch);
+    dispatch(fetchServices());
   }, [dispatch]);
 
   useEffect(() => {
     if (deletingFinish) {
-      fetchServices(dispatch);
+      dispatch(fetchServices());
     }
   }, [dispatch, deletingFinish]);
 
   const handleError = () => {
-    fetchServices(dispatch);
+    dispatch(fetchServices());
   }
 
   const handleEdit = id => {
@@ -26,7 +26,7 @@ function ServiceList(props) {
   }
 
   const handleRemove = id => {
-    deleteService(dispatch, id);
+    dispatch(deleteService(id));
   }
 
   if (error) {

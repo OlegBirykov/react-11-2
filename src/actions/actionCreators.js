@@ -104,7 +104,7 @@ export const addServiceFinish = () => ({
   type: ADD_SERVICE_FINISH,
 });
 
-export const fetchServices = async dispatch => {
+export const fetchServices = () => async dispatch => {
   dispatch(fetchServicesRequest());
   try {
     const response = await fetch(`${process.env.REACT_APP_API_URL}`)
@@ -118,7 +118,7 @@ export const fetchServices = async dispatch => {
   }
 }
 
-export const deleteService = async (dispatch, id) => {
+export const deleteService = id => async dispatch => {
   dispatch(deleteServiceRequest(id));
   try {
     const response = await fetch(`${process.env.REACT_APP_API_URL}/${id}`, {
@@ -133,7 +133,7 @@ export const deleteService = async (dispatch, id) => {
   }
 }
 
-export const editService = async (dispatch, id) => {
+export const editService = id => async dispatch => {
   dispatch(editServiceRequest());
   try {
     const response = await fetch(`${process.env.REACT_APP_API_URL}/${id}`)
@@ -147,7 +147,7 @@ export const editService = async (dispatch, id) => {
   }
 }
 
-export const addService = async (dispatch, item) => {
+export const addService = item => async dispatch => {
   dispatch(addServiceRequest());
   try {
     const response = await fetch(`${process.env.REACT_APP_API_URL}`, {
