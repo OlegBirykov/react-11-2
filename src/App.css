@@ -1,0 +1,184 @@
+button {
+  color: white;
+  background-color: rgb(221, 56, 70);
+}
+
+button:hover {
+  background-color: orange;
+}
+
+.button-spinner {
+  color: transparent;
+  opacity: 0.65;
+}
+
+.button-disabled {
+  opacity: 0.65; 
+}
+
+.App {
+  width: 450px;
+  margin: 100px auto 0 auto;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.spinner {
+  display: block;
+  margin: 0 auto;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+  
+.spinner-circle {
+  stroke-width: 10%;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+.error {
+  padding: 1em 0;
+  text-align: center;
+  border: 1px solid rgb(229, 203, 204);
+  border-radius: 5px;
+  background-color: rgb(247, 215, 218);
+}
+
+.error-button {
+  min-width: 60%;
+  margin: 1em 20%;
+  padding: 0.4em 1em 0.5em 1em;
+  border-radius: 5px;
+  font: inherit;
+}
+
+.ServiceList {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  list-style: none; 
+}
+
+.ServiceList-spinner, .ServiceAdd-spinner {
+  width: 50px;
+}
+
+.ServiceList-spinner-circle, .ServiceAdd-spinner-circle {
+  stroke: rgb(221, 56, 70);
+}
+
+.ServiceList-item {
+  display: flex;
+  align-items: center;
+  padding: 0.7em 1.5em;
+}
+
+.ServiceList-item:not(:first-child) {
+  border-top: 1px solid lightgray;
+}
+
+.ServiceList-item * {
+  display: block;
+}
+
+.ServiceList-text {
+  margin-right: auto;
+}
+
+.ServiceList-button-edit {
+  margin-right: 0.5em;
+  padding: 0.5em 0.6em;
+  border-radius: 3px;
+}
+
+.ServiceList-button-delete {
+  position: relative;
+  padding: 0.5em 0.7em;
+  border-radius: 3px;  
+}
+
+.ServiceList-button-spinner {
+  position: absolute;
+  top: 15%;
+  bottom: 15%;
+  left: 15%;
+  right: 15%;
+}
+
+.ServiceList-button-spinner-circle {
+  stroke: white;
+  stroke-width: 15%;
+}
+
+.ServiceAdd * {
+  display: block;
+  font: inherit;
+}
+
+.ServiceAdd label {
+  margin-bottom: 1em;
+}
+
+.ServiceAdd input {
+  width: 100%;
+  margin-top: 0.5em;
+  padding: 0.4em 1em 0.5em 1em;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.ServiceAdd-buttons {
+  display: flex;
+}
+
+.ServiceAdd-button-cancel {
+  margin-right: 0.4em;
+  padding: 0.4em 1em 0.5em 1em;
+  border-radius: 5px;
+}
+
+.ServiceAdd-button-save {
+  position: relative;
+  padding: 0.4em 1em 0.5em 1em;
+  border-radius: 5px;
+}
+
+.ServiceAdd-button-spinner {
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  left: 20%;
+  right: 20%;
+}
+
+.ServiceAdd-button-spinner-circle {
+  stroke: white;
+  stroke-width: 10%;
+}
+
+.ServiceAdd-error {
+  margin-top: 1em;
+  color: red;
+}
+

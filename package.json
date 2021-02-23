@@ -1,0 +1,38 @@
+{
+  "name": "react-11-2",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://olegbirykov.github.io/react-11-2/",
+  "dependencies": {
+    "nanoid": "^2.1.4",
+    "prop-types": "^15.7.2",
+    "push-dir": "^0.4.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "redux": "^4.0.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
